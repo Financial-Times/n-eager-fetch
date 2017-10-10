@@ -8,7 +8,7 @@ module.exports = function (url, opts) {
 	opts.allowedStatusCodes = undefined;
 
 	const isNotWhiteListed = (status) => {
-		return allowedStatusCodes.indexOf(status) === -1;
+		return allowedStatusCodes && allowedStatusCodes.indexOf(status) === -1;
 	}
 
 	function fetchAttempt () {
