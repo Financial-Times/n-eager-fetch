@@ -2,6 +2,7 @@ const catchNetworkErrors = require('./src/catch-network-errors');
 require('isomorphic-fetch');
 
 module.exports = function (url, opts) {
+	if (!opts) opts = {};
 	let retriesLeft = opts.retry === undefined ? 3 : opts.retry;
 	const allowedStatusCodes = opts.allowedStatusCodes || [];
 	opts.retry = undefined;
