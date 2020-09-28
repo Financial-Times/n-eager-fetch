@@ -18,5 +18,8 @@
     "eslint": "^2.11.0",
     "lintspaces-cli": "^0.1.1",
     "snyk": "^1.167.2"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
