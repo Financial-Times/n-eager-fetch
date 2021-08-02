@@ -3,9 +3,6 @@
   "main": "main.js",
   "scripts": {
     "prepublish": "make build",
-    "precommit": "node_modules/.bin/secret-squirrel",
-    "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
-    "prepush": "make verify -j3",
     "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "dependencies": {
@@ -14,12 +11,19 @@
     "npm-prepublish": "^1.2.2"
   },
   "devDependencies": {
-    "@financial-times/n-gage": "^3.6.0",
+    "@financial-times/n-gage": "^8.3.2",
     "eslint": "^2.11.0",
     "lintspaces-cli": "^0.1.1",
     "snyk": "^1.167.2"
   },
   "engines": {
     "node": "12.x"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node_modules/.bin/secret-squirrel-commitmsg",
+      "pre-commit": "node_modules/.bin/secret-squirrel",
+      "pre-push": "make verify -j3"
+    }
   }
 }
