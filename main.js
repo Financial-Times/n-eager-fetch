@@ -9,7 +9,7 @@ module.exports = function (url, opts) {
 
 	const isNotWhiteListed = (status) => {
 		return allowedStatusCodes && allowedStatusCodes.indexOf(status) === -1;
-	}
+	};
 
 	function fetchAttempt () {
 		const fetchCall = fetch(url, opts)
