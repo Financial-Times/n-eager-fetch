@@ -5,3 +5,4 @@ Extension of fetch which supports passing a `retry` value in to `options`. `retr
 Supports an `allowedStatusCodes` value in `options`. This is an array of integers of status codes that if responded with, won't attempt to retry.
 
 Fetches also have a `stopRetrying()` method which will fulfil the promise with the reult of the current in-flight fetch and not send any more requests
+test
