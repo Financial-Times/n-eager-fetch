@@ -7,7 +7,6 @@
     "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
   "dependencies": {
-    "@financial-times/n-logger": "^10.2.0",
     "isomorphic-fetch": "^3.0.0",
     "npm-prepublish": "^1.2.2"
   },
