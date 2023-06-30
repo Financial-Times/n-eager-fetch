@@ -3,8 +3,7 @@
   "main": "main.js",
   "scripts": {
     "prepublish": "make build",
-    "prepare": "npx snyk protect || npx snyk protect -d || true",
-    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+    "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "dependencies": {
     "isomorphic-fetch": "^3.0.0",
@@ -18,8 +17,8 @@
     "snyk": "^1.1100.0"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "7.x || 8.x"
+    "node": "16.x || 18.x",
+    "npm": "7.x || 8.x || 9.x"
   },
   "husky": {
     "hooks": {
@@ -29,7 +28,6 @@
     }
   },
   "volta": {
-    "node": "16.14.1",
-    "npm": "7.20.2"
+    "node": "18.16.0"
   }
 }
