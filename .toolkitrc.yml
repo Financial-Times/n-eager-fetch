@@ -1,0 +1,8 @@
+plugins:
+  - "@dotcom-tool-kit/component"
+  - "@dotcom-tool-kit/eslint"
+options:
+  '@dotcom-tool-kit/circleci':
+    nodeVersion:
+      - '18.19'
+      - '16.20'
